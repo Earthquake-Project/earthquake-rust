@@ -1,0 +1,13 @@
+[package]
+name = "earthquake"
+version = "0.1.0"
+authors = ["djsrv <dservilla@gmail.com>"]
+
+[dependencies]
+byteorder = "1.2.1"
+serde = "1.0.25"
+pyo3 = "0.2.3"
+
+[lib]
+name = "earthquake"
+crate-type = ["rlib", "cdylib"]
