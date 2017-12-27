@@ -44,7 +44,7 @@ fn read_chunks<B: ByteOrder>(mut rdr: &mut Cursor<&[u8]>) -> Result<HashMap<u32,
             let mmap_entry = &mmap_struct.entries[i as usize];
             rdr.set_position(mmap_entry.offset as u64);
             if mmap_entry.fourcc != "free" && mmap_entry.fourcc != "junk" {
-                let chunk = rdr.read_chunk::<B>(mmap_entry.fourcc.clone(), Some(mmap_entry.length)).unwrap();
+                let chunk = rdr.read_chunk::<B>(mmap_entry.fourcc.clone(), Some(mmap_entry.length))?;
                 chunks.insert(i, chunk);
             }
         }
