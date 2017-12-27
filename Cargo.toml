@@ -2,12 +2,12 @@
 name = "earthquake"
 version = "0.1.0"
 authors = ["djsrv <dservilla@gmail.com>"]
+description = "Library for reading and modifying Director files"
+homepage = "https://github.com/Earthquake-Project/earthquake-rust"
+repository = "https://github.com/Earthquake-Project/earthquake-rust"
+readme = "README.md"
+license = "Apache-2.0"
 
 [dependencies]
 byteorder = "1.2.1"
 serde = "1.0.25"
-pyo3 = "0.2.3"
-
-[lib]
-name = "earthquake"
-crate-type = ["rlib", "cdylib"]
