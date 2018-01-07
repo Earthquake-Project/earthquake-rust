@@ -29,7 +29,7 @@ impl Movie {
             _ => return Err(ReadMovieError::InvalidHeader),
         };
         Ok(Movie {
-            chunks: chunks
+            chunks: chunks,
         })
     }
 }

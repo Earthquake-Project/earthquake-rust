@@ -125,7 +125,7 @@ impl<'a> ReadChunks for Cursor<&'a [u8]> {
 
 pub enum UnexpectedChunkError {
     KnownLength(u64, String, u32, String, u32),
-    UnknownLength(u64, String, String, u32)
+    UnknownLength(u64, String, String, u32),
 }
 
 impl fmt::Debug for UnexpectedChunkError {
